@@ -23,6 +23,8 @@
     "apollo-server-express": "^3.6.2",
     "gh": "^2.8.9",
     "graphql": "^16.3.0",
-    "pages": "0.0.16"
+    "pages": "0.0.16",
+    "react-apollo": "^3.1.5",
+    "web-vitals": "^2.1.4"
   }
 }
