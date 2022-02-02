@@ -18,10 +18,19 @@ const server = new ApolloServer({
   context: authMiddleware,
 });
 
+//added from AskBCS
+const startServer = async () => {
+  await server.start();
+  server.applyMiddleware({ app });
+  console.log(`Use GraphQL at http://localhost:${PORT}${server.graphqlPath}`);
+};
+
+startServer();
+
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-server.applyMiddleware({ app });
+// server.applyMiddleware({ app });
 // if we're in production, serve client/build as static assets
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "../client/build")));
@@ -37,3 +46,5 @@ db.once("open", () => {
     console.log(`Use GraphQL at http://localhost:${PORT}${server.graphqlPath}`);
   });
 });
+
+startServer();
