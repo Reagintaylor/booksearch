@@ -10,6 +10,8 @@ Book search
 ## Installation
 
 ## Links
+https://github.com/Reagintaylor/booksearch
 
+https://peaceful-springs-06517.herokuapp.com/
 ## Credits
 

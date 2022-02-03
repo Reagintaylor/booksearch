@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Jumbotron, Container, CardColumns, Card, Button } from 'react-bootstrap';
 import { useQuery, useMutation } from "@apollo/client";
-import { getMe, deleteBook } from '../utils/API';
+// import { getMe, deleteBook } from '../utils/API';
 import Auth from '../utils/auth';
 import { removeBookId } from '../utils/localStorage';
 import { GET_ME } from "../utils/queries";
@@ -18,6 +18,8 @@ const SavedBooks = () => {
     if (!token) {
       return false;
     }
+
+    console.log(error)
 
     try {
       // const response = await deleteBook(bookId, token);
